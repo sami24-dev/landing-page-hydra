@@ -4,29 +4,21 @@ import FirstSetion from '../components/FirstSetion.astro';
 import Footer from '../components/Footer.astro';
 import Form from '../components/Form.astro';
 import Header from '../components/Header.astro';
+import HowTo from '../components/HowTo.astro';
 import Services from '../components/Services.astro';
+import Tecnologies from '../components/Tecnologies.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='landing-page-hydra-project'>
   <Header />
+  <FirstSetion />
   <main class='flex justify-center items-center flex-col w-full'>
-    <FirstSetion />
     <About />
     <Services />
+    <Tecnologies />
+    <HowTo />
     <Form />
   </main>
   <Footer />
 </Layout>
-<style is:global>
-  #about-item {
-    animation: viewComponent linear both;
-    animation-timeline: view();
-    animation-range: entry 15% cover 35%;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    #about-item {
-      animation: none;
-    }
-  }
-</style>

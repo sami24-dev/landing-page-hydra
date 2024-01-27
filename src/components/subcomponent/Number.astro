@@ -1,0 +1,27 @@
+---
+interface Props {
+  className?: string;
+  title: string;
+  rute: string;
+}
+
+const { title, rute, className } = Astro.props;
+---
+
+<div class=`flex justify-center items-center flex-col gap-5 ${className}`>
+  <div
+    class='flex justify-center items-center size-[169px] rounded-full bg-fondo p-3'
+  >
+    <div
+      class='flex justify-center items-center bg-gradient-to-r from-secundary from-0% via-primary via-100% rounded-full size-[148px]'
+    >
+      <img
+        src={rute}
+        alt=''
+      />
+    </div>
+  </div>
+  <h2 class='text-customtext text-balance font-bold text-base leading-8'>
+    {title}
+  </h2>
+</div>
