@@ -4,6 +4,7 @@ import vector4 from '../images/desktop/Vector 4.svg';
 import Frame from '../images/mobile/Frame.svg';
 import HamburgerButton from '../images/mobile/Hamburger-Button.svg';
 import Vector from '../images/mobile/Vector.svg';
+import BtnPrimary from './subcomponent/BtnPrimary.astro';
 ---
 
 <header class='w-full'>
@@ -60,15 +61,11 @@ import Vector from '../images/mobile/Vector.svg';
     </ul>
     <div class='hidden md:flex md:justify-center md:items-center md:gap-10'>
       <a
-        class='border-[1px] border-white rounded-full text-customtext py-2 px-11'
+        class='border-[1px] border-white rounded-full text-customtext py-2 px-11 text-nowrap'
         href='#contact'
         >CONTACT US</a
       >
-      <a
-        class='[background:linear-gradient(90deg,_#8176AF_0%,_#C0B7E8_100%)] py-3 px-12 block rounded-full hover:animate-pulse-two text-sm font-bold text-center text-customtextDark'
-        href='#join'
-        >JOIN HYDRA</a
-      >
+      <BtnPrimary body='JOIN HYDRA' />
     </div>
     <img
       class='md:hidden'

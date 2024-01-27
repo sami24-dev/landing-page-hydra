@@ -1,4 +1,6 @@
 ---
+import BtnPrimary from './BtnPrimary.astro';
+
 interface Props {
   title: string;
   body: string;
@@ -20,10 +22,6 @@ const { title, body } = Astro.props;
   <p class='w-4/5 text-customtext font-normal text-xs leading-4'>
     {body}
   </p>
-  <a
-    class='[background:linear-gradient(90deg,_#8176AF_0%,_#C0B7E8_100%)] py-3 px-12 block rounded-full hover:animate-pulse-two text-sm font-bold text-center text-customtextDark z-50 w-[75%] text-nowrap'
-    href='#'
-    >TRY IT NOW</a
-  >
+  <BtnPrimary body='TRY IT NOW' />
 </article>
 <style></style>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  body: string;
+}
+const { body } = Astro.props;
+---
+
+<a
+  class='[background:linear-gradient(90deg,_#8176AF_0%,_#C0B7E8_100%)] py-3 px-12 block rounded-full hover:animate-pulse-two text-sm font-bold text-center text-customtextDark z-50 w-[75%] text-nowrap'
+  href='#'
+>
+  {body}
+</a>
