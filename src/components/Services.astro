@@ -1,3 +1,14 @@
+---
+import Component1 from '../images/desktop/Component 1.svg';
+import PexelsMali from '../images/desktop/pexels-mali-maeder-756439 1.svg';
+import PexelsMikhail from '../images/desktop/pexels-mikhail-nilov-7887140 1.svg';
+import PexelsRodnae from '../images/desktop/pexels-rodnae-productions-8098263 1.svg';
+import SmallLeft from '../images/mobile/chevron-small-down-left.svg';
+import SmallRight from '../images/mobile/chevron-small-down-right.svg';
+import PexelsProduction from '../images/mobile/pexels-shvets-production-7561969 1.png';
+import Card from './subcomponent/Card.astro';
+---
+
 <section
   id='services'
   class='flex justify-center items-center flex-col my-14 w-full md:w-[86%]'
@@ -15,7 +26,7 @@
         </h2>
         <img
           class='hidden md:block h-[60px]'
-          src='/public/desktop/Component 1.svg'
+          src={Component1.src}
           alt='Component 1'
         />
       </div>
@@ -31,110 +42,46 @@
   <article
     class='flex justify-center items-center gap-5 md:w-[86%] h-auto md:mt-5 relative'
   >
-    <article
-      class='hidden md:flex justify-center items-center flex-col gap-5 w-4/5 md:min-w-[310px] min-h-[511px] rounded-3xl [background:radial-gradient(50%_50%_at_50%_50%,_#433D60_0%,_#211E2E_100%)] relative'
+    <Card
+      title='SIMULATION'
+      body='Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.'
     >
-      <div class='bg-fondo rounded-full p-2'>
-        <img
-          class='rounded-full'
-          src='/public/mobile/pexels-shvets-production-7561969 1.png'
-          alt=''
-        />
-      </div>
-      <h2
-        class='text-customtext font-bold text-base leading-8 w-full text-center'
-      >
-        SIMULATION
-      </h2>
-      <hr class='w-1/2 h-[0.5px] btn-small rounded-full' />
-      <p class='w-4/5 text-customtext font-normal text-xs leading-4'>
-        Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor
-        rhoncus libero justo laoreet sit amet vitae.
-      </p>
-      <a
-        class='[background:linear-gradient(90deg,_#8176AF_0%,_#C0B7E8_100%)] py-3 px-12 block rounded-full hover:animate-pulse-two text-sm font-bold text-center text-customtextDark z-50 w-[75%] text-nowrap'
-        href='#'
-        >TRY IT NOW</a
-      >
-    </article>
-    <article
-      class='hidden md:flex justify-center items-center flex-col gap-5 w-4/5 md:min-w-[310px] min-h-[511px] rounded-3xl [background:radial-gradient(50%_50%_at_50%_50%,_#433D60_0%,_#211E2E_100%)] relative'
+      <img
+        class='rounded-full'
+        src={PexelsProduction.src}
+        alt='PexelsProduction'
+      />
+    </Card>
+    <Card
+      title='EDUCATION'
+      body='Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.'
     >
-      <div class='bg-fondo rounded-full p-2'>
-        <img
-          class='rounded-full'
-          src='/public/desktop/pexels-mikhail-nilov-7887140 1.svg'
-          alt=''
-        />
-      </div>
-      <h2
-        class='text-customtext font-bold text-base leading-8 w-full text-center'
-      >
-        EDUCATION
-      </h2>
-      <hr class='w-1/2 h-[0.5px] btn-small rounded-full' />
-      <p class='w-4/5 text-customtext font-normal text-xs leading-4'>
-        Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor
-        rhoncus libero justo laoreet sit amet vitae.
-      </p>
-      <a
-        class='[background:linear-gradient(90deg,_#8176AF_0%,_#C0B7E8_100%)] py-3 px-12 block rounded-full hover:animate-pulse-two text-sm font-bold text-center text-customtextDark z-50 w-[75%] text-nowrap'
-        href='#'
-        >TRY IT NOW</a
-      >
-    </article>
-    <article
-      class='hidden md:flex justify-center items-center flex-col gap-5 w-4/5 md:min-w-[310px] min-h-[511px] rounded-3xl [background:radial-gradient(50%_50%_at_50%_50%,_#433D60_0%,_#211E2E_100%)] relative'
+      <img
+        class='rounded-full'
+        src={PexelsMikhail.src}
+        alt='PexelsMikhail'
+      />
+    </Card>
+    <Card
+      title='SELF-CARE'
+      body='Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.'
     >
-      <div class='bg-fondo rounded-full p-2'>
-        <img
-          class='rounded-full'
-          src='/public/desktop/pexels-rodnae-productions-8098263 2.svg'
-          alt=''
-        />
-      </div>
-      <h2
-        class='text-customtext font-bold text-base leading-8 w-full text-center'
-      >
-        SELF-CARE
-      </h2>
-      <hr class='w-1/2 h-[0.5px] btn-small rounded-full' />
-      <p class='w-4/5 text-customtext font-normal text-xs leading-4'>
-        Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor
-        rhoncus libero justo laoreet sit amet vitae.
-      </p>
-      <a
-        class='[background:linear-gradient(90deg,_#8176AF_0%,_#C0B7E8_100%)] py-3 px-12 block rounded-full hover:animate-pulse-two text-sm font-bold text-center text-customtextDark z-50 w-[75%] text-nowrap'
-        href='#'
-        >TRY IT NOW</a
-      >
-    </article>
-    <article
-      class='hidden md:flex justify-center items-center flex-col gap-5 w-4/5 md:min-w-[310px] min-h-[511px] rounded-3xl [background:radial-gradient(50%_50%_at_50%_50%,_#433D60_0%,_#211E2E_100%)] relative'
+      <img
+        class='rounded-full'
+        src={PexelsRodnae.src}
+        alt='PexelsRodnae'
+      />
+    </Card>
+    <Card
+      title='OUTDOOR'
+      body='Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.'
     >
-      <div class='bg-fondo rounded-full p-2'>
-        <img
-          class='rounded-full'
-          src='/public/desktop/pexels-mali-maeder-756439 1.svg'
-          alt=''
-        />
-      </div>
-      <h2
-        class='text-customtext font-bold text-base leading-8 w-full text-center'
-      >
-        OUTDOOR
-      </h2>
-      <hr class='w-1/2 h-[0.5px] btn-small rounded-full' />
-      <p class='w-4/5 text-customtext font-normal text-xs leading-4'>
-        Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor
-        rhoncus libero justo laoreet sit amet vitae.
-      </p>
-      <a
-        class='[background:linear-gradient(90deg,_#8176AF_0%,_#C0B7E8_100%)] py-3 px-12 block rounded-full hover:animate-pulse-two text-sm font-bold text-center text-customtextDark z-50 w-[75%] text-nowrap'
-        href='#'
-        >TRY IT NOW</a
-      >
-    </article>
+      <img
+        class='rounded-full'
+        src={PexelsMali.src}
+        alt='PexelsMali'
+      />
+    </Card>
     <div
       class='md:hidden absolute z-40 flex top-0 left-0 w-full h-full px-[5%]'
     >
@@ -142,7 +89,7 @@
         <div class='bg-fondo p-1 rounded-full'>
           <button class='btn-small rounded-full'>
             <img
-              src='/public/mobile/chevron-small-down-left.svg'
+              src={SmallLeft.src}
               alt='circle-left'
             />
           </button>
@@ -150,7 +97,7 @@
         <div class='bg-fondo p-1 rounded-full'>
           <button class='btn-small rounded-full'>
             <img
-              src='/public/mobile/chevron-small-down-right.svg'
+              src={SmallRight.src}
               alt='circle-right'
             />
           </button>

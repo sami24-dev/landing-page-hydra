@@ -1,14 +1,22 @@
+---
+import Vector2 from '../images/desktop/Vector 2.svg';
+import vector4 from '../images/desktop/Vector 4.svg';
+import Frame from '../images/mobile/Frame.svg';
+import HamburgerButton from '../images/mobile/Hamburger-Button.svg';
+import Vector from '../images/mobile/Vector.svg';
+---
+
 <header class='w-full'>
   <nav
     class='flex justify-between md:justify-around items-baseline md:items-center px-5 pt-5 md:pt-10'
   >
     <div class='flex items-baseline md:items-center gap-2'>
       <img
-        src='./public/mobile/Vector.svg'
+        src={Vector.src}
         alt='logo'
       />
       <img
-        src='./public/mobile/Frame.svg'
+        src={Frame.src}
         alt='frame'
       />
     </div>
@@ -64,19 +72,19 @@
     </div>
     <img
       class='md:hidden'
-      src='./public/mobile/Hamburger-Button.svg'
+      src={HamburgerButton.src}
       alt='menu'
     />
   </nav>
   <img
     class='z-20 hidden md:block absolute animate-pulse'
-    src='/public/desktop/Vector 4.svg'
+    src={vector4.src}
     alt='vector 4'
   />
 
   <img
     class='z-20 hidden md:block absolute right-[176px] top-[-145px] transform rotate-[-9deg] animate-pulse'
-    src='/public/desktop/Vector 2.svg'
+    src={Vector2.src}
     alt='vector'
   />
 </header>

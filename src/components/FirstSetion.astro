@@ -1,3 +1,18 @@
+---
+import Vector1Desktop from '../images/desktop/Vector 1.svg';
+import Vector3Desktop from '../images/desktop/Vector 3.svg';
+import ArrowSmallRight from '../images/desktop/arrow-small-right.svg';
+import mail from '../images/desktop/mail.svg';
+import Location from '../images/mobile/Location-Icon.svg';
+import Vector1 from '../images/mobile/Vector 1.svg';
+import Vector2 from '../images/mobile/Vector 2.svg';
+import Vector3 from '../images/mobile/Vector 3.svg';
+import chevronleft from '../images/mobile/chevron-circle-left.svg';
+import chevronright from '../images/mobile/chevron-circle-right.svg';
+import pexels from '../images/mobile/pexels-michelangelo-buonarroti-8728382 1.png';
+import mobile from '../images/mobile/phone-call.svg';
+---
+
 <section
   class='z-40 flex justify-center items-center flex-col w-full relative overflow-hidden'
 >
@@ -30,7 +45,7 @@
         <div>
           <img
             class='hidden md:flex'
-            src='/public/desktop/arrow-small-right.svg'
+            src={ArrowSmallRight.src}
             alt='arrow-small-right'
           />
         </div>
@@ -42,33 +57,33 @@
       >
         <img
           class='rounded-tl-3lg rounded-tr-3lg rounded-br-3lg rounded-bl-5lg w-full'
-          src='/public/mobile/pexels-michelangelo-buonarroti-8728382 1.png'
+          src={pexels.src}
           alt='pexels-michelangelo'
         />
       </div>
       <img
         class='z-20 md:hidden absolute left-[24%] bottom-[20%] animate-pulse'
-        src='/public/mobile/Vector 1.svg'
+        src={Vector1.src}
         alt='vector'
       />
       <img
         class='z-20 md:hidden absolute bottom-[18%] right-[19%] animate-pulse'
-        src='/public/mobile/Vector 2.svg'
+        src={Vector2.src}
         alt='vector'
       />
       <img
         class='z-20 md:hidden absolute bottom-[74px] animate-pulse'
-        src='/public/mobile/Vector 3.svg'
+        src={Vector3.src}
         alt='vector'
       />
       <img
         class='z-20 hidden md:block absolute top-[-25px] right-[49px] transform rotate-[8deg] animate-pulse'
-        src='/public/desktop/Vector 1.svg'
+        src={Vector1Desktop.src}
         alt='vector'
       />
       <img
         class='z-20 hidden md:block absolute top-[168px] right-[-50px] animate-pulse'
-        src='/public/desktop/Vector 3.svg'
+        src={Vector3Desktop.src}
         alt='vector'
       />
     </div>
@@ -81,7 +96,7 @@
     >
       <li class='flex justify-center items-center w-[350px] md:gap-x-4'>
         <img
-          src='/public/mobile/Location-Icon.svg'
+          src={Location.src}
           alt='Location-Icon'
         />
         <div>
@@ -108,7 +123,7 @@
       </li>
       <li class='hidden md:flex justify-center items-center gap-x-4'>
         <img
-          src='/public/mobile/phone-call.svg'
+          src={mobile.src}
           alt='phone-call'
         />
         <div>
@@ -135,7 +150,7 @@
       </li>
       <li class='hidden md:flex justify-center items-center gap-x-4'>
         <img
-          src='/public/desktop/mail.svg'
+          src={mail.src}
           alt='mail'
         />
         <div>
@@ -151,14 +166,14 @@
         <button class='z-50'>
           <img
             id='prev'
-            src='/public/mobile/chevron-circle-left.svg'
+            src={chevronleft.src}
             alt='circle-left'
           />
         </button>
         <button class=''>
           <img
             id='next'
-            src='/public/mobile/chevron-circle-right.svg'
+            src={chevronright.src}
             alt='circle-right'
           />
         </button>

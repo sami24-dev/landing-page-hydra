@@ -1,15 +1,32 @@
+---
+import Vector18 from '../images/desktop/Vector 18.svg';
+import Vector19 from '../images/desktop/Vector 19.svg';
+import Vector20 from '../images/desktop/Vector 20.svg';
+import Vector17 from '../images/desktop/Vector17.svg';
+import FrameFooter from '../images/mobile/Frame-footer.svg';
+import Vector18Mobile from '../images/mobile/Vector 18.svg';
+import Vector19Mobile from '../images/mobile/Vector 19.svg';
+import Vector25 from '../images/mobile/Vector25.svg';
+import Facebook from '../images/mobile/facebook.svg';
+import Instagram from '../images/mobile/instagram.svg';
+import Linkedin from '../images/mobile/linkedin (1).svg';
+import Pinterest from '../images/mobile/pinterest.svg';
+import Twitter from '../images/mobile/twitter.svg';
+import Youtube from '../images/mobile/youtube.svg';
+---
+
 <footer
   class='flex items-center flex-col mt-16 w-full text-customtext overflow-hidden'
 >
   <article>
     <img
       class='hidden md:block absolute bottom-[7.4%] left-0 animate-pulse'
-      src='/public/desktop/Vector 19.svg'
+      src={Vector19.src}
       alt='Vector 19 desktop'
     />
     <img
       class='hidden md:block absolute bottom-[4.3%] left-0 animate-pulse'
-      src='public/desktop/Vector 18.svg'
+      src={Vector18.src}
       alt='Vector 18 desktop'
     />
   </article>
@@ -18,52 +35,50 @@
   >
     <img
       class='w-[150px]'
-      src='/public/mobile/Frame-footer.svg'
+      src={FrameFooter.src}
       alt='Frame-footer'
       loading='lazy'
     />
     <img
       class='md:hidden absolute top-[-4%] left-0 animate-pulse'
-      src='/public/mobile/Vector 19.svg '
+      src={Vector19Mobile.src}
       alt='Vector 19 mobile'
       loading='lazy'
     />
     <img
       class='md:hidden absolute top-[22%] left-0 animate-pulse'
       src='/public/mobile/Vector 18.svg'
-      alt='Vector 18 mobile'
+      alt={Vector18Mobile.src}
       loading='lazy'
     />
-
     <img
       class='hidden md:block'
-      src='/public/desktop/Vector 20.svg'
+      src={Vector20.src}
       alt='vector 20'
       loading='lazy'
     />
     <ul class='hidden md:flex md:flex-col gap-y-3'>
-      <li>ABOUT</li>
-      <li>SERVICES</li>
-      <li>TECHNOLOGIES</li>
-      <li>HOW TO</li>
-      <li>JOIN HIDRA</li>
+      <li><a href=''>ABOUT</a></li>
+      <li><a href=''>SERVICES</a></li>
+      <li><a href=''>TECHNOLOGIES</a></li>
+      <li><a href=''>HOW TO</a></li>
+      <li><a href=''>JOIN HIDRA</a></li>
     </ul>
     <img
       class='hidden md:block'
-      src='/public/desktop/Vector 20.svg'
+      src={Vector20.src}
       alt='vector 20'
       loading='lazy'
     />
-
     <ul class='hidden md:flex md:flex-col gap-y-3'>
-      <li>F.A.Q</li>
-      <li>SITEMAP</li>
-      <li>CONDITIONS</li>
-      <li>LICENSES</li>
+      <li><a href=''>F.A.Q</a></li>
+      <li><a href=''>SITEMAP</a></li>
+      <li><a href=''>CONDITIONS</a></li>
+      <li><a href=''>LICENSES</a></li>
     </ul>
     <img
       class='hidden md:block'
-      src='/public/desktop/Vector 20.svg'
+      src={Vector20.src}
       alt='vector 20'
       loading='lazy'
     />
@@ -74,37 +89,37 @@
       <ul class='flex justify-center items-center gap-5'>
         <li>
           <img
-            src='/public/mobile/facebook.svg'
+            src={Facebook.src}
             alt=''
           />
         </li>
         <li>
           <img
-            src='/public/mobile/twitter.svg'
+            src={Twitter.src}
             alt=''
           />
         </li>
         <li>
           <img
-            src='/public/mobile/linkedin (1).svg'
+            src={Linkedin.src}
             alt=''
           />
         </li>
         <li>
           <img
-            src='/public/mobile/youtube.svg'
+            src={Youtube.src}
             alt=''
           />
         </li>
         <li>
           <img
-            src='/public/mobile/instagram.svg'
+            src={Instagram.src}
             alt=''
           />
         </li>
         <li>
           <img
-            src='/public/mobile/pinterest.svg'
+            src={Pinterest.src}
             alt=''
           />
         </li>
@@ -122,11 +137,11 @@
     <picture class='flex justify-center items-center w-[86%] my-10'>
       <source
         media='(min-width: 768px)'
-        srcset='/public/desktop/Vector17.svg'
+        srcset={Vector17.src}
       />
 
       <img
-        src='/public/mobile/Vector25.svg'
+        src={Vector25.src}
         alt='vector'
       />
     </picture>

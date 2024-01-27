@@ -3,9 +3,10 @@ interface Props {
   className?: string;
   title: string;
   rute: string;
+  alt: string;
 }
 
-const { title, rute, className } = Astro.props;
+const { title, rute, alt, className } = Astro.props;
 ---
 
 <div class=`flex justify-center items-center flex-col gap-5 ${className}`>
@@ -17,7 +18,7 @@ const { title, rute, className } = Astro.props;
     >
       <img
         src={rute}
-        alt=''
+        alt={alt}
       />
     </div>
   </div>

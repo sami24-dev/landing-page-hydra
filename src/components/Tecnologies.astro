@@ -1,5 +1,12 @@
 ---
-
+import Tech1 from '../images/desktop/Tech1.svg';
+import Tech2 from '../images/desktop/Tech2.svg';
+import Tech3 from '../images/desktop/Tech3.svg';
+import Tech4 from '../images/desktop/Tech4.svg';
+import PexelsRodnae from '../images/desktop/tecnologies.svg';
+import MaskGroup from '../images/mobile/Mask-group-tecnology.png';
+import SmallDownLeft from '../images/mobile/chevron-small-down-left.svg';
+import SmallDownRight from '../images/mobile/chevron-small-down-right.svg';
 ---
 
 <section
@@ -9,12 +16,12 @@
   <article class='relative'>
     <picture class=''>
       <source
-        srcset='/public/desktop/pexels-rodnae-productions-80973321.svg'
+        srcset={PexelsRodnae.src}
         media='(min-width: 768px)'
       />
       <img
         class='rounded-3xl md:rounded-full'
-        src='/public/mobile/Mask-group-tecnology.png'
+        src={MaskGroup.src}
         alt='group-tecnology'
       />
     </picture>
@@ -30,21 +37,21 @@
   <article class='w-full flex justify-center items-center md:gap-5 relative'>
     <img
       class='hidden md:block'
-      src='/public/desktop/Hydra-Tech1 1.svg'
+      src={Tech1.src}
       alt='hydra-tech1'
     />
     <img
       class='hidden md:block'
-      src='/public/desktop/Hydra-Tech3 1.svg'
+      src={Tech2.src}
       alt='hydra-tech3'
     />
     <img
       class='hidden md:block'
-      src='/public/desktop/Hydra-Tech2 1 (1).svg'
+      src={Tech3.src}
       alt='hydra-tech2'
     />
     <img
-      src='/public//mobile/Hydra-Tech4 1.svg'
+      src={Tech4.src}
       alt='Hydra-Tech4'
     />
     <div class='md:hidden absolute flex top-0 left-0 w-full h-full px-3'>
@@ -55,7 +62,7 @@
           >
             <img
               id='prev'
-              src='/public/mobile/chevron-small-down-left.svg'
+              src={SmallDownLeft.src}
               alt='circle-left'
             />
           </button>
@@ -66,7 +73,7 @@
           >
             <img
               id='next'
-              src='/public/mobile/chevron-small-down-right.svg'
+              src={SmallDownRight.src}
               alt='circle-right'
             />
           </button>

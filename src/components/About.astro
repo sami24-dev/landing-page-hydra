@@ -1,3 +1,10 @@
+---
+import Component1 from '../images/desktop/Component 1.svg';
+import Vector7 from '../images/desktop/Vector 7.svg';
+import Vector8 from '../images/desktop/Vector 8.svg';
+import PexelsHombre from '../images/mobile/pexels-shvets-hombre-production-7562014.svg';
+---
+
 <section
   id='about'
   class='flex justify-center items-center flex-col my-14 w-full md:w-[95%] md:relative'
@@ -18,7 +25,7 @@
         </h2>
         <img
           class='hidden md:block h-[60px]'
-          src='/public/desktop/Component 1.svg'
+          src={Component1.src}
           alt='Component 1'
         />
       </div>
@@ -38,7 +45,7 @@
     <div class='z-10 md:w-1/2'>
       <img
         class='mt-7 rounded-tl-3lg rounded-tr-5xl rounded-bl-5xl rounded-br-3lg'
-        src='/public/mobile/pexels-shvets-hombre-production-7562014.svg'
+        src={PexelsHombre.src}
         alt='pexels-shvets-hombre'
       />
     </div>
@@ -70,12 +77,12 @@
     </div>
     <img
       class='hidden md:block absolute bottom-[174px] animate-pulse'
-      src='/public/desktop/Vector 7.svg'
+      src={Vector7.src}
       alt='vector'
     />
     <img
       class='hidden md:block absolute bottom-0 animate-pulse'
-      src='/public/desktop/Vector 8.svg'
+      src={Vector8.src}
       alt='vector'
     />
   </article>

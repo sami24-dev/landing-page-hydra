@@ -1,4 +1,10 @@
 ---
+import Num2 from '../images/desktop/02.svg';
+import Num3 from '../images/desktop/03.svg';
+import Num4 from '../images/desktop/04.svg';
+import Component1 from '../images/desktop/Component 1.svg';
+import Vector15 from '../images/desktop/vector-15.svg';
+import Num1 from '../images/mobile/01.svg';
 import Number from './subcomponent/Number.astro';
 ---
 
@@ -18,7 +24,7 @@ import Number from './subcomponent/Number.astro';
         </h2>
         <img
           class='hidden md:block h-[60px]'
-          src='/public/desktop/Component 1.svg'
+          src={Component1.src}
           alt='Component 1'
         />
       </div>
@@ -36,23 +42,27 @@ import Number from './subcomponent/Number.astro';
     class='z-10 flex justify-center md:justify-between relative w-full md:my-32 md:w-[86%]'
   >
     <Number
-      rute='/public/mobile/01.svg'
+      rute={Num1.src}
       title='3D Conception & Design'
+      alt='imagen del numero 1'
     />
     <Number
       className='hidden md:block'
-      rute='/public/desktop/02.svg'
+      rute={Num2.src}
       title='Interaction Design'
+      alt='imagen del numero 2'
     />
     <Number
       className='hidden md:block'
-      rute='/public/desktop/03.svg'
+      rute={Num3.src}
       title='VR World User Testing'
+      alt='imagen del numero 3'
     />
     <Number
       className='hidden md:block'
-      rute='/public/desktop/04.svg'
+      rute={Num4.src}
       title='Hydra VR Deploy'
+      alt='imagen del numero 4'
     />
 
     <div class='md:hidden absolute flex -bottom-20 left-0 w-full h-full px-3'>
@@ -80,7 +90,7 @@ import Number from './subcomponent/Number.astro';
   </article>
   <img
     class='hidden md:block absolute top-[40%]'
-    src='/public/desktop/vector-15.svg'
+    src={Vector15.src}
     alt='vector-15'
   />
 </section>
