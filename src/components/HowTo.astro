@@ -5,92 +5,91 @@ import Num4 from '../images/desktop/04.svg';
 import Component1 from '../images/desktop/Component 1.svg';
 import Vector15 from '../images/desktop/Vector-15.svg';
 import Num1 from '../images/mobile/01.svg';
+import ChevronLeft from '../images/mobile/chevron-circle-left.svg';
+import ChevronRight from '../images/mobile/chevron-circle-right.svg';
 import Number from './subcomponent/Number.astro';
 ---
 
 <section
-  class='flex justify-center items-center flex-col mt-12 w-full relative'
->
-  <article class='flex justify-center items-center md:w-[86%]'>
-    <div class='md:flex md:flex-col md:justify-start md:items-start md:w-[48%]'>
-      <h2 class='text-customtext font-bold text-base leading-8'>
-        HOW WE BUILD
-      </h2>
-      <div class='md:flex md:items-center md:justify-center md:gap-5'>
-        <h2
-          class='text-base md:text-nowrap text-customtext font-light leading-8'
-        >
-          WITH HYDRA VR?
-        </h2>
-        <img
-          class='hidden md:block h-[60px]'
-          src={Component1.src}
-          alt='Component 1'
-        />
-      </div>
-    </div>
+	class='flex justify-center items-center flex-col mt-12 w-full relative'>
+	<article class='flex justify-center items-center md:w-[86%]'>
+		<div class='md:flex md:flex-col md:justify-start md:items-start md:w-[48%]'>
+			<h2 class='text-customtext font-bold text-base leading-8'>
+				HOW WE BUILD
+			</h2>
+			<div class='md:flex md:items-center md:justify-center md:gap-5'>
+				<h2
+					class='text-base md:text-nowrap text-customtext font-light leading-8'>
+					WITH HYDRA VR?
+				</h2>
+				<img
+					class='hidden md:block h-[60px]'
+					src={Component1.src}
+					alt='Component 1'
+				/>
+			</div>
+		</div>
 
-    <p class='hidden md:flex md:w-[52%] text-customtext font-normal text-base'>
-      Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
-      Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet
-      mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget
-      sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna
-      fringilla urna porttitor rhoncus vitae.
-    </p>
-  </article>
-  <article
-    class='z-10 flex justify-center md:justify-between relative w-full md:my-32 md:w-[86%]'
-  >
-    <Number
-      rute={Num1.src}
-      title='3D Conception & Design'
-      alt='imagen del numero 1'
-    />
-    <Number
-      className='hidden md:block'
-      rute={Num2.src}
-      title='Interaction Design'
-      alt='imagen del numero 2'
-    />
-    <Number
-      className='hidden md:block'
-      rute={Num3.src}
-      title='VR World User Testing'
-      alt='imagen del numero 3'
-    />
-    <Number
-      className='hidden md:block'
-      rute={Num4.src}
-      title='Hydra VR Deploy'
-      alt='imagen del numero 4'
-    />
-
-    <div class='md:hidden absolute flex -bottom-20 left-0 w-full h-full px-3'>
-      <div class='my-auto w-full flex justify-between px-1'>
-        <div class='bg-fondo p-1 rounded-full'>
-          <button class='btn-small rounded-full'>
-            <img
-              id='prev'
-              src='/public/mobile/chevron-small-down-left.svg'
-              alt='circle-left'
-            />
-          </button>
-        </div>
-        <div class='bg-fondo p-1 rounded-full'>
-          <button class='btn-small rounded-full'>
-            <img
-              id='next'
-              src='/public/mobile/chevron-small-down-right.svg'
-              alt='circle-right'
-            />
-          </button>
-        </div>
-      </div>
-    </div>
-  </article>
-  <img
-    class='hidden md:block absolute top-[40%]'
-    src={Vector15.src}
-    alt='vector-15'
-  />
+		<p class='hidden md:flex md:w-[52%] text-customtext font-normal text-base'>
+			Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
+			Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet
+			mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget
+			sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna
+			fringilla urna porttitor rhoncus vitae.
+		</p>
+	</article>
+	<article
+		class='z-10 flex justify-center md:justify-between relative w-full md:my-32 md:w-[86%]'>
+		<Number
+			rute={Num1.src}
+			title='3D Conception & Design'
+			alt='imagen del numero 1'
+		/>
+		<Number
+			className='hidden md:block'
+			rute={Num2.src}
+			title='Interaction Design'
+			alt='imagen del numero 2'
+		/>
+		<Number
+			className='hidden md:block'
+			rute={Num3.src}
+			title='VR World User Testing'
+			alt='imagen del numero 3'
+		/>
+		<Number
+			className='hidden md:block'
+			rute={Num4.src}
+			title='Hydra VR Deploy'
+			alt='imagen del numero 4'
+		/>
+		<div class='md:hidden absolute flex -bottom-20 left-0 w-full h-full px-3'>
+			<div class='my-auto w-full flex justify-between px-1'>
+				<div class='p-1 rounded-full'>
+					<button class='btn-small rounded-full'>
+						<img
+							id='prev'
+							src={ChevronLeft.src}
+							alt='circle-left'
+						/>
+					</button>
+				</div>
+				<div class='size-9 p-1 rounded-full'>
+					<button class='btn-small size-8 rounded-full'>
+						<img
+							id='next'
+							class='size-8'
+							src={ChevronRight.src}
+							alt='circle-right'
+						/>
+					</button>
+				</div>
+			</div>
+		</div>
+	</article>
+	<img
+		class='hidden md:block absolute top-[40%]'
+		src={Vector15.src}
+		alt='vector-15'
+	/>
 </section>

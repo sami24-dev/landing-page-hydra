@@ -2,7 +2,7 @@
 import About from '../components/About.astro';
 import FirstSetion from '../components/FirstSetion.astro';
 import Footer from '../components/Footer.astro';
-import Form from '../components/Form.astro';
+import Form from '../components/form/Form.astro';
 import Header from '../components/Header.astro';
 import HowTo from '../components/HowTo.astro';
 import Services from '../components/Services.astro';
@@ -11,14 +11,14 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='landing-page-hydra-project'>
-  <Header />
-  <FirstSetion />
-  <main class='flex justify-center items-center flex-col w-full'>
-    <About />
-    <Services />
-    <Tecnologies />
-    <HowTo />
-    <Form />
-  </main>
-  <Footer />
+	<Header />
+	<FirstSetion />
+	<main class='flex justify-center items-center flex-col w-full'>
+		<About />
+		<Services />
+		<Tecnologies />
+		<HowTo />
+		<Form />
+	</main>
+	<Footer />
 </Layout>

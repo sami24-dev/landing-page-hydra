@@ -1,0 +1,98 @@
+---
+import chevronleft from '../../images/mobile/chevron-circle-left.svg';
+import chevronright from '../../images/mobile/chevron-circle-right.svg';
+import Location from '../../images/mobile/Location-Icon.svg';
+import mobile from '../../images/mobile/phone-call.svg';
+import mail from '../../images/desktop/mail.svg';
+---
+
+<div
+	class='md:hidden w-[90%] md:w-[86%] h-[149px] overflow-hidden [background:radial-gradient(50%_2900.76%_at_50%_53.89%,_rgba(58,_52,_86,_0.95)_0%,_#211E2E_100%)] rounded-full md:mt-8 relative'>
+	<div class='flex transition-transform ease-in-out carousel'>
+		<div class='carousel-item'>
+			<div class='flex justify-center items-center h-[150px]'>
+				<img
+					src={Location.src}
+					alt='Location-Icon'
+				/>
+				<div>
+					<h2 class='font-bold text-customtext text-2xl'>Pay Us a Visit</h2>
+					<span class='text-sm font-normal text-customtext'
+						>Union St, Seattle, WA 98101, United States</span
+					>
+				</div>
+			</div>
+		</div>
+		<div class='carousel-item'>
+			<div class='flex justify-center items-center h-[150px]'>
+				<img
+					src={mobile.src}
+					alt='phone-call'
+				/>
+				<div>
+					<h2 class='font-bold text-customtext text-2xl'>Give Us a Call</h2>
+					<span class='text-sm font-normal text-customtext'
+						>(110) 1111-1010</span
+					>
+				</div>
+			</div>
+		</div>
+		<div class='carousel-item'>
+			<div class='flex justify-center items-center h-[150px]'>
+				<img
+					src={mail.src}
+					alt='mail'
+				/>
+				<div>
+					<h2 class='font-bold text-customtext text-2xl'>Send Us a Message</h2>
+					<span class='text-sm font-normal text-customtext'
+						>Contact@HydraVTech.com</span
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button class='carousel-button prev-button'>
+		<img
+			id='prev'
+			src={chevronleft.src}
+			alt='circle-left'
+		/>
+    </button>
+	<button class='carousel-button next-button'>
+        <img
+			id='next'
+			src={chevronright.src}
+			alt='circle-right'
+		/>
+	</button>
+</div>
+<script src='./carousel.js'></script>
+
+<style>
+	.carousel-item {
+		padding-left: 10px;
+		padding-right: 10px;
+		height: 150px;
+		flex: 0 0 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	.carousel-button {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: transparent;
+		color: #fff;
+		padding: 10px;
+		border: none;
+		cursor: pointer;
+		z-index: 9999;
+	}
+	.prev-button {
+		left: 0;
+	}
+	.next-button {
+		right: 0;
+	}
+</style>
