@@ -1,0 +1,15 @@
+---
+interface Props {
+	className: string;
+}
+const { className } = Astro.props;
+---
+
+<div class=`${className} min-h-40 overflow-hidden relative contain__carousel`>
+	<div class='flex lg:justify-between lg:w-full items-center transition-transform ease-in-out duration-200 carousel'>
+		<slot />
+	</div>
+	<slot name='btnLeft-after-items' />
+	<slot name='btnRight-after-items' />
+	<script src='./carousel.js'></script>
+</div>

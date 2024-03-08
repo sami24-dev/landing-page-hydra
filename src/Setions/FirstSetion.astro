@@ -1,4 +1,6 @@
 ---
+import Carousel from '../components/carousel/Carousel.astro';
+import ItemCarousel from '../components/carousel/ItemCarousel.astro';
 import Vector1Desktop from '../images/desktop/Vector 1.svg';
 import Vector3Desktop from '../images/desktop/Vector 3.svg';
 import ArrowSmallRight from '../images/desktop/arrow-small-right.svg';
@@ -11,7 +13,6 @@ import chevronleft from '../images/mobile/chevron-circle-left.svg';
 import chevronright from '../images/mobile/chevron-circle-right.svg';
 import pexels from '../images/mobile/pexels-michelangelo-buonarroti-8728382 1.png';
 import mobile from '../images/mobile/phone-call.svg';
-import Carousel from './carouseles/Carousel.astro';
 ---
 
 <section
@@ -84,11 +85,10 @@ import Carousel from './carouseles/Carousel.astro';
 			/>
 		</div>
 	</article>
-	<article
-		class='hidden w-[90%] md:w-[86%] md:flex justify-center items-center [background:radial-gradient(50%_2900.76%_at_50%_53.89%,_rgba(58,_52,_86,_0.95)_0%,_#211E2E_100%)] rounded-full px-5 py-4 md:mt-8 relative'>
-		<ul
-			class='flex flex-row flex-nowrap w-full md:justify-around overflow-x-hidden'>
-			<li class='flex justify-center items-center w-[350px] md:gap-x-4'>
+	<Carousel
+		className='w-[90%] md:w-[86%] h-[149px] [background:radial-gradient(50%_2900.76%_at_50%_53.89%,_rgba(58,_52,_86,_0.95)_0%,_#211E2E_100%)] rounded-full md:mt-8 lg:px-8'>
+		<ItemCarousel>
+			<div class='flex justify-center items-center h-[150px]'>
 				<img
 					src={Location.src}
 					alt='Location-Icon'
@@ -99,22 +99,24 @@ import Carousel from './carouseles/Carousel.astro';
 						>Union St, Seattle, WA 98101, United States</span
 					>
 				</div>
-			</li>
-			<li class='hidden md:block'>
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					width='1'
-					height='117'
-					viewBox='0 0 1 117'
-					fill='none'>
-					<path
-						d='M0.5 116.5V0'
-						stroke='#C0B7E8'
-						stroke-opacity='0.33'
-					></path>
-				</svg>
-			</li>
-			<li class='hidden md:flex justify-center items-center gap-x-4'>
+			</div>
+		</ItemCarousel>
+		<div class='hidden lg:block'>
+			<svg
+				xmlns='http://www.w3.org/2000/svg'
+				width='1'
+				height='117'
+				viewBox='0 0 1 117'
+				fill='none'>
+				<path
+					d='M0.5 116.5V0'
+					stroke='#C0B7E8'
+					stroke-opacity='0.33'
+				></path>
+			</svg>
+		</div>
+		<ItemCarousel>
+			<div class='flex justify-center items-center h-[150px]'>
 				<img
 					src={mobile.src}
 					alt='phone-call'
@@ -125,22 +127,24 @@ import Carousel from './carouseles/Carousel.astro';
 						>(110) 1111-1010</span
 					>
 				</div>
-			</li>
-			<li class='hidden md:block'>
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					width='1'
-					height='117'
-					viewBox='0 0 1 117'
-					fill='none'>
-					<path
-						d='M0.5 116.5V0'
-						stroke='#C0B7E8'
-						stroke-opacity='0.33'
-					></path>
-				</svg>
-			</li>
-			<li class='hidden md:flex justify-center items-center gap-x-4'>
+			</div>
+		</ItemCarousel>
+		<div class='hidden lg:block'>
+			<svg
+				xmlns='http://www.w3.org/2000/svg'
+				width='1'
+				height='117'
+				viewBox='0 0 1 117'
+				fill='none'>
+				<path
+					d='M0.5 116.5V0'
+					stroke='#C0B7E8'
+					stroke-opacity='0.33'
+				></path>
+			</svg>
+		</div>
+		<ItemCarousel>
+			<div class='flex justify-center items-center h-[150px]'>
 				<img
 					src={mail.src}
 					alt='mail'
@@ -151,26 +155,27 @@ import Carousel from './carouseles/Carousel.astro';
 						>Contact@HydraVTech.com</span
 					>
 				</div>
-			</li>
-		</ul>
-		<div class='md:hidden absolute flex top-0 left-0 w-full h-full'>
-			<div class='my-auto w-full flex justify-between px-1'>
-				<button class='z-50'>
-					<img
-						id='prev'
-						src={chevronleft.src}
-						alt='circle-left'
-					/>
-				</button>
-				<button class=''>
-					<img
-						id='next'
-						src={chevronright.src}
-						alt='circle-right'
-					/>
-				</button>
 			</div>
-		</div>
-	</article>
-	<Carousel />
+		</ItemCarousel>
+		<button
+			class='lg:hidden absolute left-0 -inset-y-1/2 bg-transparent p-2 border-none cursor-pointer z-50'
+			slot='btnLeft-after-items'>
+			<img
+				class='prev'
+				data-button='prev'
+				src={chevronleft.src}
+				alt='circle-left'
+			/>
+		</button>
+		<button
+			class='lg:hidden absolute -inset-y-1/2 right-0 bg-transparent p-2 border-none cursor-pointer z-50'
+			slot='btnRight-after-items'>
+			<img
+				data-button='next'
+				class='next'
+				src={chevronright.src}
+				alt='circle-right'
+			/>
+		</button>
+	</Carousel>
 </section>

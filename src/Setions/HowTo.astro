@@ -1,13 +1,15 @@
 ---
+import Number from '../components/Number.astro';
+import Carousel from '../components/carousel/Carousel.astro';
+import ItemCarousel from '../components/carousel/ItemCarousel.astro';
+import Num1 from '../images/desktop/01.svg';
 import Num2 from '../images/desktop/02.svg';
 import Num3 from '../images/desktop/03.svg';
 import Num4 from '../images/desktop/04.svg';
 import Component1 from '../images/desktop/Component 1.svg';
 import Vector15 from '../images/desktop/Vector-15.svg';
-import Num1 from '../images/mobile/01.svg';
-import ChevronLeft from '../images/mobile/chevron-circle-left.svg';
-import ChevronRight from '../images/mobile/chevron-circle-right.svg';
-import Number from './subcomponent/Number.astro';
+import SmallDownLeft from '../images/mobile/chevron-small-down-left.svg';
+import SmallDownRight from '../images/mobile/chevron-small-down-right.svg';
 ---
 
 <section
@@ -38,13 +40,59 @@ import Number from './subcomponent/Number.astro';
 			fringilla urna porttitor rhoncus vitae.
 		</p>
 	</article>
-	<article
+	<Carousel
+		className='z-10 flex justify-center relative w-[90%] lg:w-full md:my-32 md:w-[86%]'>
+		<ItemCarousel>
+			<Number
+				rute={Num1.src}
+				title='Interaction Design'
+				alt='imagen del numero 1'
+			/>
+		</ItemCarousel>
+		<ItemCarousel>
+			<Number
+				rute={Num2.src}
+				title='Interaction Design'
+				alt='imagen del numero 2'
+			/>
+		</ItemCarousel>
+		<ItemCarousel>
+			<Number
+				rute={Num3.src}
+				title='VR World User Testing'
+				alt='imagen del numero 3'
+			/>
+		</ItemCarousel>
+		<ItemCarousel>
+			<Number
+				rute={Num4.src}
+				title='Hydra VR Deploy'
+				alt='imagen del numero 4'
+			/>
+		</ItemCarousel>
+		<button
+			class='lg:hidden absolute left-0 bottom-0 bg-fondo p-1 rounded-full'
+			slot='btnLeft-after-items'>
+			<img
+				class='bg-gradient-to-r from-secundary from-0% via-primary via-100% rounded-full'
+				data-button='prev'
+				src={SmallDownLeft.src}
+				alt='circle-left'
+			/>
+		</button>
+		<button
+			class='lg:hidden absolute right-0 bottom-0 bg-fondo p-1 rounded-full'
+			slot='btnRight-after-items'>
+			<img
+				class='bg-gradient-to-r from-secundary from-0% via-primary via-100% rounded-full'
+				data-button='next'
+				src={SmallDownRight.src}
+				alt='circle-right'
+			/>
+		</button>
+	</Carousel>
+	<!-- <article
 		class='z-10 flex justify-center md:justify-between relative w-full md:my-32 md:w-[86%]'>
-		<Number
-			rute={Num1.src}
-			title='3D Conception & Design'
-			alt='imagen del numero 1'
-		/>
 		<Number
 			className='hidden md:block'
 			rute={Num2.src}
@@ -86,7 +134,7 @@ import Number from './subcomponent/Number.astro';
 				</div>
 			</div>
 		</div>
-	</article>
+	</article> -->
 	<img
 		class='hidden md:block absolute top-[40%]'
 		src={Vector15.src}
