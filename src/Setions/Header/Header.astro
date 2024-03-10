@@ -1,0 +1,83 @@
+---
+import BtnPrimary from '../../components/Buttons/BtnPrimary.astro';
+import Vector2 from '../../images/desktop/Vector 2.svg';
+import vector4 from '../../images/desktop/Vector 4.svg';
+import Frame from '../../images/mobile/Frame.svg';
+import HamburgerButton from '../../images/mobile/Hamburger-Button.svg';
+import Vector from '../../images/mobile/Vector.svg';
+---
+
+<header
+	class='header flex justify-between items-end lg:items-center w-full lg:w-[90%] p-5 relative'>
+	<div class='flex items-baseline md:items-center gap-2'>
+		<img
+			src={Vector.src}
+			alt='logo'
+		/>
+		<img
+			src={Frame.src}
+			alt='frame'
+		/>
+	</div>
+	<input
+		class='hidden'
+		type='checkbox'
+		id='menu-toggle'
+	/>
+	<label
+		for='menu-toggle'
+		class='lg:hidden px-5 cursor-pointer z-10'>
+		<img
+			src={HamburgerButton.src}
+			alt='menu-hamburger'
+		/>
+	</label>
+	<nav
+		class='menu hidden lg:flex lg:justify-center lg:gap-x-8 items-baseline lg:static absolute top-24 left-0 w-full h-screen lg:w-auto lg:h-auto p-5 lg:p-0 z-50 bg-[#302c42] lg:bg-transparent transition-all ease-out duration-100 transform-[translateX(100%)]'>
+		<ul
+			class='flex flex-col lg:flex-row justify-center items-center gap-y-5 lg:gap-x-10 p-5 lg:p-0 text-customtext text-xs'>
+			<li
+				class='hover:transition ease-in-out hover:-translate-y-[0.10rem] hover:scale-125 duration-300'>
+				<a href='#about'>ABOUT</a>
+			</li>
+			<li
+				class='hover:transition ease-in-out hover:-translate-y-[0.10rem] hover:scale-125 duration-300'>
+				<a href='#services'>SERVICES</a>
+			</li>
+			<li
+				class='hover:transition ease-in-out hover:-translate-y-[0.10rem] hover:scale-125 duration-300'>
+				<a href='#technologies'>TECHNOLOGIES</a>
+			</li>
+			<li
+				class='hover:transition ease-in-out hover:-translate-y-[0.10rem] hover:scale-125 duration-300'>
+				<a href='#how-to'>HOW TO</a>
+			</li>
+		</ul>
+		<div
+			class='flex flex-col lg:flex-row justify-center items-center gap-y-5 lg:gap-10'>
+			<a
+				class='border-[1px] border-white rounded-full text-customtext py-2 px-11 text-nowrap'
+				href='#contact'
+				>CONTACT US</a
+			>
+			<BtnPrimary body='JOIN HYDRA' />
+		</div>
+	</nav>
+	<img
+		class='z-20 hidden md:block absolute animate-pulse'
+		src={vector4.src}
+		alt='vector 4'
+	/>
+	<img
+		class='z-20 hidden md:block absolute right-[176px] top-[-145px] transform rotate-[-9deg] animate-pulse'
+		src={Vector2.src}
+		alt='vector'
+	/>
+</header>
+<script src='./header.js'></script>
+<!-- <style>
+	#menu-toggle:checked ~ .menu {
+		display: block;
+		transform: translateX(0%);
+	}
+</style> -->
